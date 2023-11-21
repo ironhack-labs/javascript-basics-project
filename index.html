@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>JavaScript Quiz</h1>
+      </header>
+
+      <!-- Start View -->
+      <div id="startView" class="view">
+        <div class="divider"></div>
+        <div id="startQuestionsCount" class="emphasis">Total Questions</div>
+        <div class="content">
+            <br />
+            <p class="title"><b>Description</b></p>
+          <div id="quizDescription"></div>
+        </div>
+
+        <button id="startButton" class="button-primary">Start Quiz</button>
+      </div>
+
+      <!-- Game View -->
+      <div id="quizView" class="view" style="display: none">
+        <div id="progress">
+          <div id="progressBar"></div>
+        </div>
+        <div id="questionTitle"></div>
+
+        <div class="content">
+          <div id="question"></div>
+          <ul id="choices"></ul>
+        </div>
+        <div id="timeRemaining">Remaining Time: <span>00:00</span></div>
+        <button id="nextButton" class="button-primary">Answer</button>
+      </div>
+
+      <!-- End Quiz View -->
+      <div id="endView" class="view" style="display: none">
+        <div id="result-progress">
+          <div id="resultProgressBar"></div>
+        </div>
+
+        <p class="emphasis">Results</p>
+        <div class="content">
+          <div id="result"></div>
+        </div>
+        <button id="restartButton" class="button-secondary">Restart Quiz</button>
+      </div>
+    </div>
+    <script src="src/question.js"></script>
+    <script src="src/quiz.js"></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
